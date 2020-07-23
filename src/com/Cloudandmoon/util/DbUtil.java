@@ -4,14 +4,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-//µ¼´í°üÁË£¡
+//å¯¼é”™åŒ…äº†ï¼
 
 public class DbUtil {
 	
 	private String diverclass = "com.mysql.cj.jdbc.Driver";
 	private String url = "jdbc:mysql://localhost:3306/db_student_manager_web?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false";
-	private String user = "root";
-	private String password = "zxc2486";
+	private String user = "xxxx";
+	private String password = "xxxx";
 	private Connection connection = null;
 
 	public Connection getConnection() {
@@ -19,7 +19,7 @@ public class DbUtil {
 			try {
 				Class.forName(diverclass);
 				connection = DriverManager.getConnection(url, user, password);
-				System.out.println("³É¹¦ÁË£¡");
+				System.out.println("æˆåŠŸäº†ï¼");
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			} catch (SQLException e) {
@@ -33,7 +33,7 @@ public class DbUtil {
 		if(connection != null)
 			try {
 				connection.close();
-				System.out.println("Êı¾İ¿âÁ¬½ÓÒÑ¹Ø±Õ");
+				System.out.println("æ•°æ®åº“è¿æ¥å·²å…³é—­");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
